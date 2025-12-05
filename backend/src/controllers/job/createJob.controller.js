@@ -29,7 +29,13 @@ export const createJob = catchAsync(async (req, res) => {
     });
   }
 
-  sendCreated(res, 'Job created successfully', job);
+  // Update user onboarding status
+  if (!req.user.onboardingCompleted) {
+    req.user.onboardingCompleted = true;
+    await req.user.save();
+  }
+
+  sendCreated(res, 'Job created successfully', { job, user: req.user });
 });
 
 export default createJob;
