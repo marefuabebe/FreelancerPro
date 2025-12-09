@@ -1,10 +1,10 @@
 import express from 'express';
-import { logout } from '../../controllers/auth/logout.controller.js';
+import { getContractById } from '../../controllers/contract/getContractById.controller.js';
 import { protectedRoute } from '../../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/', protectedRoute, logout);
+router.get('/:id', protectedRoute, getContractById);
 
 export default router;
 

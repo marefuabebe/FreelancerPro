@@ -1,10 +1,9 @@
 import express from 'express';
-import { logout } from '../../controllers/auth/logout.controller.js';
+import { dislikeJob } from '../../controllers/job/dislikeJob.controller.js';
 import { protectedRoute } from '../../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.post('/', protectedRoute, logout);
+router.post('/:jobId/dislike', protectedRoute, dislikeJob);
 
 export default router;
-
