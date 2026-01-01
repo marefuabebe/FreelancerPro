@@ -1,0 +1,93 @@
+// Countries list
+export const countries = [
+    { value: 'us', label: 'United States' },
+    { value: 'uk', label: 'United Kingdom' },
+    { value: 'ca', label: 'Canada' },
+    { value: 'au', label: 'Australia' },
+    { value: 'de', label: 'Germany' },
+    { value: 'fr', label: 'France' },
+    { value: 'es', label: 'Spain' },
+    { value: 'it', label: 'Italy' },
+    { value: 'nl', label: 'Netherlands' },
+    { value: 'se', label: 'Sweden' },
+    { value: 'no', label: 'Norway' },
+    { value: 'dk', label: 'Denmark' },
+    { value: 'fi', label: 'Finland' },
+    { value: 'pl', label: 'Poland' },
+    { value: 'pt', label: 'Portugal' },
+    { value: 'ie', label: 'Ireland' },
+    { value: 'in', label: 'India' },
+    { value: 'pk', label: 'Pakistan' },
+    { value: 'bd', label: 'Bangladesh' },
+    { value: 'ph', label: 'Philippines' },
+    { value: 'id', label: 'Indonesia' },
+    { value: 'my', label: 'Malaysia' },
+    { value: 'sg', label: 'Singapore' },
+    { value: 'th', label: 'Thailand' },
+    { value: 'vn', label: 'Vietnam' },
+    { value: 'cn', label: 'China' },
+    { value: 'jp', label: 'Japan' },
+    { value: 'kr', label: 'South Korea' },
+    { value: 'br', label: 'Brazil' },
+    { value: 'mx', label: 'Mexico' },
+    { value: 'ar', label: 'Argentina' },
+    { value: 'cl', label: 'Chile' },
+    { value: 'co', label: 'Colombia' },
+    { value: 'za', label: 'South Africa' },
+    { value: 'ng', label: 'Nigeria' },
+    { value: 'eg', label: 'Egypt' },
+    { value: 'ke', label: 'Kenya' },
+    { value: 'ae', label: 'United Arab Emirates' },
+    { value: 'sa', label: 'Saudi Arabia' },
+    { value: 'il', label: 'Israel' },
+    { value: 'tr', label: 'Turkey' },
+    { value: 'ru', label: 'Russia' },
+    { value: 'ua', label: 'Ukraine' },
+    { value: 'nz', label: 'New Zealand' },
+];
+
+// Languages list
+export const languages = [
+    { value: 'en', label: 'English' },
+    { value: 'es', label: 'Spanish' },
+    { value: 'fr', label: 'French' },
+    { value: 'de', label: 'German' },
+    { value: 'it', label: 'Italian' },
+    { value: 'pt', label: 'Portuguese' },
+    { value: 'ru', label: 'Russian' },
+    { value: 'zh', label: 'Chinese (Mandarin)' },
+    { value: 'ja', label: 'Japanese' },
+    { value: 'ko', label: 'Korean' },
+    { value: 'ar', label: 'Arabic' },
+    { value: 'hi', label: 'Hindi' },
+    { value: 'bn', label: 'Bengali' },
+    { value: 'ur', label: 'Urdu' },
+    { value: 'id', label: 'Indonesian' },
+    { value: 'ms', label: 'Malay' },
+    { value: 'th', label: 'Thai' },
+    { value: 'vi', label: 'Vietnamese' },
+    { value: 'tl', label: 'Tagalog' },
+    { value: 'nl', label: 'Dutch' },
+    { value: 'pl', label: 'Polish' },
+    { value: 'sv', label: 'Swedish' },
+    { value: 'no', label: 'Norwegian' },
+    { value: 'da', label: 'Danish' },
+    { value: 'fi', label: 'Finnish' },
+    { value: 'tr', label: 'Turkish' },
+    { value: 'he', label: 'Hebrew' },
+    { value: 'uk', label: 'Ukrainian' },
+    { value: 'el', label: 'Greek' },
+    { value: 'cs', label: 'Czech' },
+    { value: 'ro', label: 'Romanian' },
+    { value: 'hu', label: 'Hungarian' },
+];
+
+export const getCountryLabel = (value) => {
+    const country = countries.find((c) => c.value === value);
+    return country ? country.label : value;
+};
+
+export const getLanguageLabel = (value) => {
+    const language = languages.find((l) => l.value === value);
+    return language ? language.label : value;
+};
